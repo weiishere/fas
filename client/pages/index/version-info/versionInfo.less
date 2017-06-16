@@ -1,0 +1,236 @@
+@bannerImg:"../img/banner.png";
+@personImg:"../img/person.png";
+@fundImg:"../img/fund.png";
+@backgroundBlack:'../img/black.jpg';
+@heightBeyond:40px;
+#layout{
+  height:100%
+}
+.edit-area-content{
+  background-color: #ffffff;
+}
+.inner-modules-wrap{
+  border-top:1px solid transparent;
+  border-right: 1px solid #424a58;
+  //padding: 0px 10px;
+  background-color: #404040;
+  height: 100%;
+  overflow-y: scroll;
+  border-left: 1px solid #424a58;
+  & .module{
+    margin: 10px 10px;
+    background-repeat: no-repeat;
+    background-color: #4b5155;
+    background-position: 20px 20px;
+    & .module-info{
+      display: block;
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      left: 0;
+      font-size: 12px;
+      color: #ffffff;
+      line-height: 1;
+    }
+  }
+}
+.module{;
+  position: relative;
+  text-align: center;
+  width: 160px;;
+  font-size: 12px;
+  line-height: 50px;
+  height: 50px;
+  text-overflow: ellipsis;
+  background-size: contain;
+  background-position: center;
+  color:#ffffff;
+  background-repeat: no-repeat;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  cursor: move;
+  & .module-info{
+    display: none;
+  }
+  & .inner-mask-tip{
+    display: none;
+  }
+  &.banner{
+    width: 205px;
+    height: 126px;
+    background-image: url(@bannerImg);
+    background-size: 165px 106px-@heightBeyond;
+  }
+  &.person{
+    width: 205px;
+    height: 132px;
+    background-image: url(@personImg);
+    background-size: 165px 112px-@heightBeyond;}
+  &.fund{
+    width: 205px;
+    height: 248px;
+    background-image: url(@fundImg);
+    background-size: 165px 228px-@heightBeyond;
+  }
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+}
+.edit-area-fix{
+  width: 700px;
+  height: 100%;
+  left: 50%;
+  margin-left: -350px;
+  top: 0px;
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+}
+.scroll-wrap{
+  position: absolute;
+  width: 313px;
+  height: 100%;
+  overflow: auto;
+  left: 50%;
+  margin-left: -106.5px;
+}
+.pageContainer-wrap{
+  position: relative;
+  margin: 40px auto;
+  background-image: url("../img/mobile.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 313px 628px;
+  height: 628px;
+  width: 313px;
+  position: relative;
+  & .question {
+    width: auto;
+    height: auto;
+    border: none;
+    position: absolute;
+    font-size: 14px;
+    color: #ffbf00;
+    right: 20px;
+    top: 50px;
+    &:hover {
+      cursor: auto;
+      background-color: inherit;
+    }
+  }
+}
+.inner-page-wrap{
+  position: absolute;
+  top: 79px;
+  left: 25px;
+  width: 266px;
+  height: 470px;
+}
+.pageContainer{
+  margin-top: 35px;
+  background-color: #ffffff;
+  width: 266px;
+  height: 434px;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow:-moz-scrollbars-vertical;
+}
+.page-title{
+  color: #333333;
+  text-align: center;
+  font-size: 13px;
+  width: 100%;
+  background-color: #ffffff;
+  height: 35px;
+  font-weight: normal;
+  line-height: 35px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-bottom: 1px solid #dddddd;
+}
+.button-wrap{
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  width: 160px;
+  height: 50px;
+  font-size: 13px;
+  line-height: 50px;
+  text-align: center;
+  margin-top: 50px;
+  background: #F15353;
+  box-shadow: 0 10px 28px 0 rgba(241,83,83,0.60);
+  color:#fff;
+  margin-bottom: 50px;
+}
+.pageContainer .module:hover,.pageContainer .module.active{
+  cursor: move;
+}
+.pageContainer .module:hover,.pageContainer .module.active{
+  & .inner-mask-tip{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    color: #ffffff;
+    line-height: 100%;
+    text-align: center;
+    font-size: 14px;
+    span{
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 0px;
+      margin-top: -8px;
+    }
+  }
+}
+.pageContainer .module{
+  color: transparent;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -ms-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
+  background-color: #ffffff;
+  padding: 0;
+  -webkit-background-size:contain;
+  background-size:contain;
+  background-position: left;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.pageContainer .module.banner{
+  margin: 0;
+  width: 100%;
+  height: 108px;
+  background-image: url(@bannerImg);
+}
+.pageContainer .module.person{
+  margin: 0;
+  width: 100%;
+  height: 116px;
+  background-image: url(@personImg)
+}
+.pageContainer .module.fund{
+  margin: 0;
+  width: 100%;
+  height: 336px;
+  background-image: url(@fundImg)
+}
+.warning-str{
+  color: #333;
+  text-align: center;
+  font-size: 14px;
+}

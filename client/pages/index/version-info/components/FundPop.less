@@ -1,0 +1,180 @@
+.fund(){
+  .annualYieldRange{
+    overflow: hidden;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+  }
+  .fund-item-entity-left{
+    display: table-cell;
+    vertical-align: middle;
+    width: 45%;
+  }
+  .fund-item-entity-right{
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    margin-left: 5%;
+    .overflow-text{
+      overflow: hidden;
+      white-space: nowrap;
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+    }
+  }
+  .sup-1{
+    margin-right: 5px;
+    width: 101px;
+
+  }
+  .fund-range{
+    color:#F15353;
+    font-size: 12px;
+  }
+  .fund-name{
+    color:#333333;
+  }
+}
+ul{
+  list-style: none;
+  color: #fff;
+}
+li{
+  list-style: none;
+}
+
+.fund-config.active{
+  background-color: #108ee9;
+  color: #ffffff;
+  .fund-range,.fund-name{
+    color: #ffffff;
+  }
+}
+/*.right-fund-list .fund-config */.ribbon-hot{
+  right: 0;
+  top: 0;
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 16px;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE4AAABQBAMAAABFWF7FAAAAIVBMVEUAAAAAAAAAAADtUlLJUFC1Tk6zTk60T0+0Tk7xU1O0Tk7BNfVQAAAACXRSTlMAAwaCwMCCgUGT6Q2UAAAA2ElEQVRIx+3PsQ3CMBQG4aNAoswLG5gFoGSErEDHCKxBS5U+AslTgktHsXINFfz16Xs2u2Fc3JF622m5e1DvnhvgiWqX3AK7qouIswBLt2+AMev6FtjNuoMAS5cEGJ8lAW6+ASYDbsph+2UJxh/8abCzIBJEgkgQCSJBJIgEkSASRIJIEAkiQSSIBJEgEkSCSBAJIkEkiASRIBJEgkgQCSJBJIgEkSASRIJIEAkiQSSIBJEgEmQdTAVkHewLiAKHEcwLpxED9nlAgXlCgfmJAvPVda9AHb7FGzPv98IA6rwpAAAAAElFTkSuQmCC');
+  -webkit-background-size:contain;
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.left-fund-list .fund-config .transform-btn{
+  //display: none;
+  visibility: hidden;
+}
+.transform-btn{
+  position: absolute;
+  right: -80px;
+}
+
+.ribbon-default{
+  display: none;
+}
+.add-transit{
+  opacity: 0.5;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.fund-config{
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -ms-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
+  cursor: pointer;
+  margin: 10px auto;
+  text-align: center;
+  background-color: rgba(255,255,255,1);
+  color: #999999;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+  font-size: 10px;
+  display: table;
+  width: 202.5px;
+  height: 55px;
+  padding: 0px 10px;
+  position: relative;
+  .fund();
+  .fund-config{
+    .fund();
+  }
+}
+.fund-config .mask-fund{
+  display: none;
+}
+.fund-pop{
+  height: 400px;
+  .left-fund-list{
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    float: left;
+    width: 212.5px;
+    position: relative;
+  }
+  .right-fund-list{
+    position: relative;
+    margin-left: 32px;
+    float: left;
+    width: 60%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+    .fund-config{
+      &.fund-offline{
+        background-color: #ffbf00;
+        .fund-range,.fund-name,span{
+          color: #ffffff;
+        }
+        .offline-item{
+          //color: #F15353
+        }
+      }
+      cursor: move;
+      position: relative;
+      &:hover .mask-fund{
+        display: block;
+        font-size: 14px;
+        color: #ffffff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.3);
+        span{
+          display: block;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 50%;
+          text-align: center;
+          margin-top: -10px;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+.fund-pop:after{
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.ant-upload-list-item-done .anticon-cross{display:none}
+.ant-upload-list-picture img{width:148px !important}
