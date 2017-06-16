@@ -1,3 +1,15 @@
-dist/
-node_modules/
+.idea
+node_modules
+dist
+npm-debug.log
+.DS_Store
 
+# 一些不需要提交的文件
+# server/config/index.js
+public/dll/*
+public/dev/node_modules
+public/dev/_dist/
+/server/views/runtime/*.hbs
+!/server/views/runtime/index.hbs
+!/server/views/runtime/5825a3943c3d7b5a998f311d.hbs
+.gitignore

@@ -5,6 +5,13 @@ import MappingPlugin from 'webpack-mapping-plugin';
 import precss from 'precss';
 import autoprefixer from 'autoprefixer';
 
+// const path =require('path');
+// const webpack =require('webpack');
+// const ExtractTextPlugin =require('extract-text-webpack-plugin');
+// const MappingPlugin =require('webpack-mapping-plugin');
+// const precss =require('precss');
+// const autoprefixer =require('autoprefixer');
+
 const appPath = path.resolve(__dirname, 'public');
 const nodeModules = path.resolve(__dirname, 'node_modules');
 
